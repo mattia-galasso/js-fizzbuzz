@@ -42,26 +42,24 @@ const secondMultipleWord = "Buzz";
 //* FINCHE (Il conteggio non arriva a 100 continua a contare 1 numero alla volta)
 for (let i = countStart; i <= countEnd; i += countStep) {
   //* Dichiaro la variante per il messaggio
-  let message = i;
+  let message = "";
+  let colorLog;
 
-  //* SE (Il numero del conteggio è multiplo di 3 e di 5)
-  if (i % firstMultiple === 0 && i % secondMultiple === 0) {
-    //* Scrive entrambe le parole
-    message = firstMultipleWord + secondMultipleWord;
-    /* console.log(firstMultipleWord + secondMultipleWord); */
-  }
-  //* ALTRIMENTI SE (il numero è multiplo di 3)
-  else if (i % firstMultiple === 0) {
-    //* Scrive solo la prima parola
+  //* SE (il numero è multiplo di 3)
+  if (i % firstMultiple === 0) {
+    //* Scrive la prima parola
     message = firstMultipleWord;
-    /* console.log(firstMultipleWord); */
+    colorLog = `color: black; background-color: #ff7f50`;
   }
-  //* ALTRIMENTI SE (Il numero è multiplo di 5)
-  else if (i % secondMultiple === 0) {
-    //* Scrive solo la seconda parola
-    message = secondMultipleWord;
-    /* console.log(secondMultipleWord); */
+  //* SE (Il numero è multiplo di 5)
+  if (i % secondMultiple === 0) {
+    //* Scrive la seconda parola
+    message += secondMultipleWord;
+    colorLog = `color: black; background-color: #6495ed`;
   }
-  //* ALTRIMENTI (Il numero non è multiplo ne di 3 e ne di 5)
-  console.log(message);
+
+  if (message === "") {
+    message = i;
+  }
+  console.log(`%c${message}`, colorLog);
 }
