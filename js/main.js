@@ -20,3 +20,22 @@ Nome repo: `js-fizzbuzz`
 */
 
 //! PSEUDO CODICE
+
+//* Dichiaro il numero di partenza
+const countStart = 1;
+
+//* Dichiaro il numero di arrivo
+const countEnd = 100;
+
+//* Dichiaro l'intervallo
+const countStep = 1;
+
+//* Dichiaro il primo multiplo e la parola da stampare
+const firstMultiple = 3;
+const firstMultipleWord = "Fizz";
+
+//* Dichiaro il primo multiplo e la parola da stampare
+const secondMultiple = 5;
+const secondMultipleWord = "Buzz";
+
+//? Output
