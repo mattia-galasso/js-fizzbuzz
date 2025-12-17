@@ -56,10 +56,14 @@ for (let i = countStart; i <= countEnd; i += countStep) {
     //* Scrive la seconda parola
     message += secondMultipleWord;
     colorLog = `color: black; background-color: #6495ed`;
+    if (i % firstMultiple === 0) {
+      colorLog = `color: black; background-color: #6b8e23`;
+    }
   }
 
   if (message === "") {
     message = i;
   }
-  console.log(`%c${message}`, colorLog);
+
+  console.log(`%c ${message} `, colorLog);
 }
